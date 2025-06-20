@@ -133,7 +133,7 @@ export async function drawMap(genFactor, map_data, non_water_tiles) {
     };
 
     try {
-        const response = await fetch('http://192.168.1.6:8000/generate-image', {
+        const response = await fetch('https://jugnletodo.onrender.com/generate-image', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
