@@ -88,6 +88,7 @@ function Jungle() {
         <div className="loading-map">
             <div className="loading-spinner"></div>
             <p className="loading-text">Generating jungle map...</p>
+            <p className="loading-text">(Hold on this might take a few seconds)</p>
         </div>
     );
 
