@@ -1,0 +1,130 @@
+/* Remove all borders and background */
+.jungle-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Full-screen container */
+.jungle-image-container {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+/* Image styling */
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Remove any default transform wrapper styling */
+.react-transform-wrapper {
+    touch-action: none;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Hide the transform component's built-in boundaries */
+.react-transform-component {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.controls-bottom {
+    position: fixed;
+    bottom: 20px;
+    /* left: 0; */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.controls-bottom > button {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.controls-bottom > button:hover {
+    transform: scale(1.1);
+}
+
+.reset-interaction {
+
+    background-color: #ffeba9;
+    border: 4px solid #df8927;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.reset-interaction svg {
+    color: #df8927;
+    width: 70%;
+    height: 70%;
+    display: block; /* remove unwanted gaps below svg */
+
+}
+
+.reset-interaction:hover {
+    background-color: #ffe798;
+}
+
+.download-interaction {
+
+    background-color: rgb(189, 255, 169);
+    border: 4px solid rgb(57, 145, 30);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.download-interaction svg {
+    color: rgb(57, 145, 30);
+    width: 80%;
+    height: 80%;
+    display: block; /* remove unwanted gaps below svg */
+
+}
+
+.download-interaction:hover {
+    background-color: rgb(155, 255, 125);
+}
+
+  @media (max-width: 768px) {
+    .controls-bottom  {
+      top: auto; /* Remove vertical centering */
+      bottom: 20px; /* Position above bottom */
+      left: 50%; /* Center horizontally */
+      right: auto; /* Override right positioning */
+      transform: translateX(-50%); /* Center the container */
+      flex-direction: row;
+      padding: 10px 15px;
+
+
+      width: auto; /* Shrink to fit content */
+      max-width: 90%; /* Prevent touching screen edges */
+    }
+  }

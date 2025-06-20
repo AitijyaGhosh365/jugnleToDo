@@ -1,0 +1,122 @@
+.interaction-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .interaction-btns {
+    position: fixed; /* This makes it stick to viewport */
+
+      top: auto; /* Remove vertical centering */
+      bottom: 20px; /* Position above bottom */
+      left: 50%; /* Center horizontally */
+      right: auto; /* Override right positioning */
+      transform: translateX(-50%); /* Center the container */
+      flex-direction: row;
+      padding: 10px 15px;
+      width: auto; /* Shrink to fit content */
+      max-width: 90%; /* Prevent touching screen edges */
+    }
+  }
+
+.interaction-btns > button {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.interaction-btns > button:hover {
+    transform: scale(1.1);
+}
+
+
+.add-task-interaction {
+    background-color: rgb(189, 255, 169);
+    border: 4px solid rgb(57, 145, 30);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.add-task-interaction svg {
+    color: rgb(57, 145, 30);
+    width: 100%;
+    height: 100%;
+    display: block; /* remove unwanted gaps below svg */
+
+}
+
+.add-task-interaction:hover {
+    background-color: rgb(155, 255, 125);
+}
+
+.delete-all-task-interaction{
+    background-color: rgb(255, 183, 183);
+    border: 4px solid #cc2c2c;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.delete-all-task-interaction svg {
+    color: #cc2c2c;
+
+    width: 100%;
+    height: 100%;
+    display: block; /* remove unwanted gaps below svg */
+
+}
+
+
+.delete-all-task-interaction:hover{
+    background-color: rgb(255, 167, 167);
+}
+
+.delete-completed-task-interaction{
+    position: relative;
+    background-color: #ffeba9;
+    border: 4px solid #df8927;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.delete-completed-task-interaction > svg{
+    position: absolute;
+}
+
+#dcti-trash {
+    color:#df8927 ;
+    width: 20px;
+    position: relative;
+    left: 10px;   /* shift right by 10px */
+    top:13px;     /* shift down by 5px */
+}
+
+#dcti-tick {
+    color:#df8927 ;
+}
+
+.delete-completed-task-interaction:hover{
+    background-color:#ffe798;
+}
