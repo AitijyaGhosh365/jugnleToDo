@@ -142,7 +142,7 @@ const TaskDiv = ({ task, onUpdateTask, onTaskInteraction, onDeleteTask, isModalO
 
     <button
     className="
-        absolute -right-3 bottom-5 w-7 h-7 border-2 border-red-500 rounded-full cursor-pointer
+        absolute -right-3 -top-3 w-7 h-7 border-2 border-red-500 rounded-full cursor-pointer
         bg-red-100 flex items-center justify-center text-2xl text-red-500 
         hover:bg-red-200 hover:text-red-700 hover:scale-[1.05] 
         opacity-0 scale-90 
